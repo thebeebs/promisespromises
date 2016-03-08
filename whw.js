@@ -26,10 +26,9 @@ addElement(first)
 .then(x => addElement(fourth))
 
 function addElement(element){
-    var myPromise = new Promise(function(resolve,reject){
+    return new Promise(function(resolve,reject){
     setTimeout(function(){
         document.body.appendChild(element);
         resolve();
     }, Math.random() * 2000);
-});
-return myPromise;}
+})}
