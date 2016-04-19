@@ -1,7 +1,10 @@
 'use strict';
-var first=document.createElement('H1');
-first.innerText = 'First';
+addElement("first")
+.then(x => {return addElement("second")})
+.then(x => { return addElement("third")})
+.then(x => { return addElement("fourth")})
 
+<<<<<<< HEAD
 var second=document.createElement('H1');
 second.innerText = 'Second';
 
@@ -27,7 +30,13 @@ addElement(first)
 
 function addElement(element){
     return new Promise(function(resolve,reject){
+=======
+function addElement(elementText){
+    var myPromise = new Promise(function(resolve,reject){
+>>>>>>> 18dc9429c695228633e269681dbbd5fb6af8879a
     setTimeout(function(){
+        var element=document.createElement('H1');
+        element.innerText = `${elementText} ${Date.now()}`;
         document.body.appendChild(element);
         resolve();
     }, Math.random() * 2000);
