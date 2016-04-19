@@ -30,10 +30,6 @@ addElement(first)
 
 function addElement(element){
     return new Promise(function(resolve,reject){
-=======
-function addElement(elementText){
-    var myPromise = new Promise(function(resolve,reject){
->>>>>>> 18dc9429c695228633e269681dbbd5fb6af8879a
     setTimeout(function(){
         var element=document.createElement('H1');
         element.innerText = `${elementText} ${Date.now()}`;
