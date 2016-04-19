@@ -4,7 +4,6 @@ addElement("first")
 .then(x => { return addElement("third")})
 .then(x => { return addElement("fourth")})
 
-<<<<<<< HEAD
 var second=document.createElement('H1');
 second.innerText = 'Second';
 
